@@ -1,0 +1,23 @@
+sec  rsa3072/E5C9437B82AD9DAE
+     created: 2021-03-20  expires: never       usage: SC
+     trust: ultimate      validity: ultimate
+ssb  rsa3072/DF3631117FA75C99
+     created: 2021-03-20  expires: never       usage: E
+ssb  rsa2048/7EE8946EF30C5096
+     created: 2021-03-20  expires: 2022-03-20  usage: S
+	 
+常用gpg命令
+
+导出公钥
+gpg --armor --output D:\public-key.txt --export E5C9437B82AD9DAE
+gpg --armor --output D:\public-key.asc --export E5C9437B82AD9DAE
+
+导出私钥
+gpg --armor --output D:\private-key.asc --export-secret-keys E5C9437B82AD9DAE
+
+导出子密钥
+gpg --armor --output D:\private-key-sub.asc --export-secret-subkeys 7EE8946EF30C5096!
+
+参考
+https://www.ruanyifeng.com/blog/2013/07/gpg.html
+https://mogeko.me/2019/068/
